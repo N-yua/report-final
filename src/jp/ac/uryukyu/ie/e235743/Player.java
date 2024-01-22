@@ -11,7 +11,7 @@ public class Player {
 /*プレイヤーのHP */
     int hp;
 /*コンストラクタ */
-    Player(String name,int hp,String food){
+    public Player(String name,int hp,String food){
         this.name = name;
         this.hp = hp;
         this.food = food;

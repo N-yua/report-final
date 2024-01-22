@@ -13,7 +13,7 @@ public class Monster {
     /*モンスターの捕まえやすさ */
         int get;
     /*コンストラクタ */
-        Monster(String name,int attack,int get){
+        public Monster(String name,int attack,int get){
             this.name = name;
             this.attack = attack;
             this.get = get;
@@ -53,7 +53,7 @@ public class Monster {
         }
     }
 /*モンスターの好感度が低い時に捕まえようとすると攻撃してくるメソッド */
-    void attack(Monster executer,Player target){
+    public void attack(Monster executer,Player target){
         if (target.getHp() > 0) {
             System.out.println(executer.getName()+"は怒った！");
             System.out.print(target.getName()+ "に" + executer.getAttack() + "ポイント攻撃した！ \n");
