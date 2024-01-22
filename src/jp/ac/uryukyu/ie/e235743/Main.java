@@ -1,4 +1,6 @@
 package jp.ac.uryukyu.ie.e235743;
+import java.util.ArrayList;
+import java.util.List;
 /*Mainクラス
  * 機能を主に実装するクラス
  */
@@ -6,10 +8,11 @@ public class Main {
 /*mainメソッド<br>
  * ここでモンスターにご飯を与えるか、捕まえるか、逃げるかの選択をする
  */
-    public static void main(){
+    public static void main(String[] args){
     /*インスタンス */
         Monster dog = new Monster("いぬ", 5,0);
         Player player = new Player("ゆあ", 20,"ジャーキー");
+        List<String> list = new ArrayList<String>();
         /*モンスターが現れた */
         dog.appearance();
         /*ご飯をあげる、ゲットする、逃げるから選択するメソッド<br>
@@ -46,6 +49,8 @@ public class Main {
                         }else{
                             dog.lovepoint();
                             System.out.println(dog.name+"を仲間にした！");
+                            /*捕まえた場合、空のリストに犬を入れる<br>*/
+                            list.add("いぬ");
                             break;
                         }
                     /*選択肢３の場合、ループ処理を強制終了する */
@@ -58,5 +63,9 @@ public class Main {
                     }
                 }
             }
+        /*あなたの捕まえたモンスターを表示します。*/
+        for(int i = 0; i < list.size(); i ++){
+            System.out.println(list.get(i));
+        }
     }
 }
