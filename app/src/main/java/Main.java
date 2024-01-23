@@ -1,6 +1,9 @@
-package jp.ac.uryukyu.ie.e235743;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import jp.ac.uryukyu.ie.e235743.Monster;
+import jp.ac.uryukyu.ie.e235743.Player;
 /*Mainクラス
  * 機能を主に実装するクラス
  */
@@ -24,7 +27,7 @@ public class Main {
                     /*モンスターのステータスを表示する<br>
                      * ご飯を与え続けると2ずつカウントされる
                      */
-                    dog.sttatus();
+                    dog.status();
                     final String[] Types = {"1.ご飯をあげる","2.ゲットする","3.逃げる"};
                     /*配列の中身を全て表示する */
                     for(int i = 0; i<3; i++){
@@ -49,7 +52,7 @@ public class Main {
                             dog.attack(dog,player);
                         }else{
                             dog.lovepoint();
-                            System.out.println(dog.name+"を仲間にした！");
+                            System.out.println(dog.getName()+"を仲間にした！");
                             /*捕まえた場合、空のリストに犬を入れる<br>*/
                             list.add("いぬ");
                             break;

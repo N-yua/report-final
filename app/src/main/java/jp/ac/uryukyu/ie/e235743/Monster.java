@@ -29,25 +29,25 @@ public class Monster {
             return attack;
         }
 /*モンスターが出現した時のメッセージ */
-    void appearance(){
+    public void appearance(){
         System.err.println(this.name + "が現れた！" + "\n 警戒力：" + this.get +  "\n 攻撃力：" + this.attack);
     }
 /*モンスターのステータス 
  * 好感度＝捕まえやすさ　高ければ高いほど捕まえやすい
 */
-    void sttatus(){
+    public void status(){
         System.err.println( "名前：" + this.name + "\n 好感度：" + this.get);
     }
 /*モンスターにご飯をあげた時におこること<br>
  * ご飯を食べると、捕まえやすさが上がる
 */
-    void eat(){
+    public void eat(){
         System.out.println(this.name +"はご飯を食べた！");
         get += 2;
         System.out.println("好感度が"+getGet()+"上がった！");
     }
 /*好感度が１０以上になり、捕まえた時のメッセージ */
-    void lovepoint(){
+    public void lovepoint(){
         if (get >= 10) {
             System.out.println("なついた！");
         }

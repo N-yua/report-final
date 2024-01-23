@@ -1,11 +1,10 @@
-package test;
+package jp.ac.uryukyu.ie.e235743;
 
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import jp.ac.uryukyu.ie.e235743.Monster;
-import jp.ac.uryukyu.ie.e235743.Player;
+
 
 public class MonsterTest {
     @Test public void attack(){

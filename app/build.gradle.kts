@@ -50,4 +50,5 @@ tasks.withType<Jar> {
     manifest {
         attributes["Main-Class"] = "Main"
     }
+tasks.named<JavaExec>("run") {    standardInput = System.`in`}
 }

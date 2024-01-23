@@ -12,3 +12,4 @@ plugins {
 
 rootProject.name = "report-final"
 include("app")
+
