@@ -10,23 +10,32 @@ public class Player {
     String food;
 /*プレイヤーのHP */
     int hp;
-/*コンストラクタ */
+/*コンストラクタ 
+ * @param name プレイヤーの名前
+ * @param hp　プレイヤーの体力
+ * @param food　モンスターに与える食べ物の名前
+*/
     public Player(String name,int hp,String food){
         this.name = name;
         this.hp = hp;
         this.food = food;
     }
-/*getterメソッド */
+/*nameのgetterメソッド */
     public String getName(){
         return name;
     }
+/*foodのgetterメソッド
+ */
     public String getFood(){
         return food;
     }
+/*hpのgetterメソッド */
     public int getHp(){
         return hp;
     }
-/*プレイヤーが受けたダメージを計算するメソッド */
+/*プレイヤーが受けたダメージを計算するメソッド 
+ * ＠param damage プレイヤーがうけた攻撃力をint型で受け取る
+*/
     void damage(int damage){
         hp -= damage;
     }

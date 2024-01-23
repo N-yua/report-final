@@ -12,19 +12,25 @@ public class Monster {
         int attack;
     /*モンスターの捕まえやすさ */
         int get;
-    /*コンストラクタ */
+    /*コンストラクタ
+     * @param name モンスターの名前
+     * @param attack　モンスターが持つ攻撃力をint型で受け取る
+     * @param get　モンスターの好感度をint型で受け取る
+     */
         public Monster(String name,int attack,int get){
             this.name = name;
             this.attack = attack;
             this.get = get;
         }
-    /*Getterメソッド */
+    /*getのgetterメソッド*/
         public int getGet(){
             return get;
         }
+    /*nameのgetterメソッド */
         public String getName(){
             return name;
         }
+    /*attackのgetterメソッド */
         public int getAttack(){
             return attack;
         }
@@ -52,11 +58,18 @@ public class Monster {
             System.out.println("なついた！");
         }
     }
-/*モンスターの好感度が低い時に捕まえようとすると攻撃してくるメソッド */
+/*モンスターの好感度が低い時に捕まえようとすると攻撃してくるメソッド 
+ * @param Monster executer 攻撃をする側
+ * @param Player target 攻撃をしたい相手
+*/
     public void attack(Monster executer,Player target){
+        /*攻撃をしたい相手のHPが０以上の時<br>
+         * モンスターはプレイヤーを攻撃できる
+         */
         if (target.getHp() > 0) {
             System.out.println(executer.getName()+"は怒った！");
             System.out.print(target.getName()+ "に" + executer.getAttack() + "ポイント攻撃した！ \n");
+            /*@param getAttack() プレイヤーのダメージ数はモンスターの攻撃力を受け取る*/
             target.damage(executer.getAttack());
             System.out.println("\n" + target.getName() + "の残りHP:" + target.getHp()); 
         }

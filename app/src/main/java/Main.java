@@ -1,20 +1,35 @@
+/*
+ * @author e235743
+ */
 
+ /*
+  * モンスターに餌を与え好感度を上げて捕まえる機能を実装するメインクラス
+  */
 import java.util.ArrayList;
 import java.util.List;
 
 import jp.ac.uryukyu.ie.e235743.Monster;
 import jp.ac.uryukyu.ie.e235743.Player;
-/*Mainクラス
- * 機能を主に実装するクラス
- */
+
 public class Main {
 /*mainメソッド<br>
  * ここでモンスターにご飯を与えるか、捕まえるか、逃げるかの選択をする
+ * @param args 使用しない
  */
     public static void main(String[] args){
-    /*インスタンス */
+    /*モンスターのインスタンス 
+     * @param name 　モンスターの名前を受け取る
+     * @param attack 　攻撃力をint型で受け取る
+     * @param get 　好感度をint型で受け取る。初期は0
+    */
         Monster dog = new Monster("いぬ", 5,0);
+    /*プレイヤーのインスタンス
+     * @param name 名前　プレイヤーの名前を受け取る
+     * @param hp 体力　プレイヤーの体力をint型で受け取る
+     * @param food　モンスターにあげる食べ物の名前
+     */
         Player player = new Player("ゆあ", 20,"ジャーキー");
+    /*空リスト */
         List<String> list = new ArrayList<String>();
         
         /*モンスターが現れた */
